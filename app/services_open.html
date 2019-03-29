@@ -331,7 +331,7 @@
 
               <div class="row">
 
-                <div class="col-md-8">
+                <div class="col-xl-8 col-lg-10">
                   
                   <div class="serv_cnt">
 
@@ -368,7 +368,7 @@
   
               <div class="row">
   
-                <div class="col-md-6 d-flex justify-content-center">
+                <div class="col-12 col-lg-5 order-2 order-lg-1 col-xl-6 d-flex justify-content-center">
                   <form class="form_call">
   
                     <div class="f_wr">
@@ -379,22 +379,46 @@
                       </div>
     
                       <div class="f_cnt">
-                        
-                        <input type="text" name="name">
-                        <input type="tel" name="phone">
-                        <input type="email" name="email">
-                        <textarea name="message" cols="30" rows="10"></textarea>
+
+                        <div class="inp_wr">
+                          <input type="text" name="name" class="effect-2" placeholder="Ваше имя" required>
+                          <span class="focus-border"></span>
+                        </div>
+                        <div class="inp_wr">
+                          <input type="tel" name="phone" class="effect-2" placeholder="Номер Телефона" required>
+                          <span class="focus-border"></span>
+                        </div>
+                        <div class="inp_wr">
+                          <input type="email" name="email" class="effect-2" placeholder="Email">
+                          <span class="focus-border"></span>
+                        </div>
+                        <div class="inp_wr">
+                          <input type="text" name="comp_name" class="effect-2" placeholder="Ваша компания" required>
+                          <span class="focus-border"></span>
+                        </div>
+                        <div class="inp_wr">
+                          <textarea name="message" cols="30" rows="4" class="effect-2" placeholder="Сообщение"></textarea>
+                          <span class="focus-border"></span>
+                        </div>
   
-                        <input type="submit" value="Отправить">
+                        <input type="submit" value="Отправить" class="button butt_bl">
   
                       </div>
-  
+
                     </div> 
+
+                    <div class="success">
+                      
+                        <i class="fas fa-user-check"></i>
+                        <p class="suc_desc">Спасибо за заявку!</p>
+                        <p class="suc_desc">Наш менеджер свяжется с вами в ближайшее время.</p>
+
+                    </div>
   
                   </form>
                 </div>
   
-                <div class="col-md-6">
+                <div class="col-md-12 order-1 order-lg-2 col-lg-7 col-xl-6">
                   <div class="experience">
   
                     <div class="exp_descr">

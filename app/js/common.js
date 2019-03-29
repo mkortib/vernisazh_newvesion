@@ -41,7 +41,10 @@ $(function() {
       $('.fo_type').removeClass('sub_cl3');      
       $('.T_type').removeClass('sub_cl2');      
       $('.f_type').removeClass('mob_list');      
+      // $('.main_services #wh_bt').css('display', 'none');      
     })
+
+
 
 
 
@@ -218,6 +221,52 @@ $(function() {
     // e.prevenrDefault();
     $('.seo_wr').slideToggle();
   })
+
+
+  // Form validation
+
+  $('form :submit').on('click', function () {
+    $('input:required').each(function () {
+        if (!$(this).val()) $(this).addClass('incomplete');
+    });
+  });
+
+  $('input:required').on('input', function () {
+      $('input:required').each(function () {
+        $(this).removeClass('incomplete');      
+      });
+  });
+
+  $('input[name=phone]').mask("+38 (999) 999-9999", {
+      completed: function () {
+          $(this).removeClass('incomplete');
+      }
+  });
+
+  $('input[name=name]').on('input', function () {
+      $(this).val($(this).val().replace(/[0-9\\/^$.|?*+\-_()]/g, ""));
+  });
+
+
+
+
+
+  $('#drop_img5').click(function() {
+    $('.depth5').toggleClass('show');
+    $(this).toggleClass('arr_rev');
+  })
+
+  $('#drop_img6').click(function() {
+    $('.depth6').toggleClass('show');
+    $(this).toggleClass('arr_rev');
+  })
+
+  $('#drop_img7').click(function() {
+    $('.depth7').toggleClass('show');
+    $(this).toggleClass('arr_rev');
+  })
+
+  
 
   // Preloader 
 
@@ -453,7 +502,7 @@ $(function() {
   // });
 
 
-  // SCROLL SMOOTH
+ // SCROLL SMOOTH
 
   // try {
   //   $.browserSelector();

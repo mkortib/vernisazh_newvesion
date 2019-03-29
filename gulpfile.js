@@ -48,6 +48,7 @@ gulp.task('js', function() {
 		'app/libs/fancybox/jquery.fancybox.min.js',
 		'app/libs/jQuery.equalHeights/jquery.equalheights.min.js',
 		'app/libs/parallax/parallax.min.js',
+		'app/libs/jQuery-Mask-Plugin-master/dist/jquery.mask.min.js',
 		'app/libs/aos/aos.js',
 		'app/js/common.js', // Always at the end
 		])
