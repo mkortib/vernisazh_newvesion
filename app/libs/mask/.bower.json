@@ -1,0 +1,34 @@
+{
+  "name": "mask",
+  "description": "Javascript input mask plugin",
+  "version": "0.1.0",
+  "homepage": "https://github.com/firstandthird/mask",
+  "license": "MIT",
+  "copyright": "First + Third",
+  "main": "dist/mask.js",
+  "dependencies": {
+    "fidel": "~2.2.5"
+  },
+  "devDependencies": {
+    "assert": "*",
+    "blanket": "*"
+  },
+  "ignore": [
+    "test",
+    "example",
+    "lib",
+    "Gruntfile.js",
+    "package.json",
+    "grunt"
+  ],
+  "_release": "0.1.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.1.0",
+    "commit": "a7750cf6a3784e5327dd2e2edac172b69ebe6d7e"
+  },
+  "_source": "https://github.com/firstandthird/mask.git",
+  "_target": "^0.1.0",
+  "_originalSource": "mask",
+  "_direct": true
+}
