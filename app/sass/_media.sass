@@ -65,7 +65,7 @@
 			font-size: 19px
 
 			a
-				display: block
+				// display: block
 				font-size: 19px
 
 	.catal_itm
@@ -102,6 +102,14 @@
 		max-width: 965px
 		font-size: 19px
 
+	// PROJECTS PAGE
+
+	.proj_itms 
+		
+		h4
+			line-height: 1.4
+
+
 	// NEWS OPEN 
 
 	.new_cnt_wr 
@@ -126,6 +134,9 @@
 
 	//OPEN PROJECTS PAGE
 
+	.new_open
+		padding: 50px 0
+
 	.proj_port 
 
 		.potr_itm
@@ -134,6 +145,38 @@
 		h4, p
 			font-size: 21px
 			line-height: 1.2
+
+	.form_call 
+		
+		.f_cnt
+			padding: 50px 0 17px 0
+
+		.button
+			margin-top: 20px
+
+	// Contact page
+
+	.cont_resp
+		max-width: 67%
+
+	.bread_contact
+		position: absolute
+
+	.f_contact 
+		max-width: 541px
+		padding: 80px 0 0 44px 
+
+	.cont_inf_wr
+		width: 48%
+
+	.an_comp h5
+		width: 80%
+
+	.map
+		height: 650px
+
+	.main_nav
+		bottom: 20px
 			
 
 
@@ -278,7 +321,7 @@
 			font-size: 17px
 
 			a
-				display: block
+				// display: block
 				font-size: 17px
 
 	.catal_itm
@@ -404,6 +447,29 @@
 
 	.proj_open
 		padding: 50px 0!important
+
+
+	// Contact page
+
+	.cont_resp
+		max-width: 67%
+
+	.bread_contact
+		position: absolute
+
+	.f_contact 
+		max-width: 490px
+		padding: 80px 0 0 0px 
+
+	.cont_inf_wr
+		width: 48%
+		padding: 50px 50px 30px 50px
+
+	.an_comp h5
+		width: 95%
+
+	.map
+		height: 500px
 			
 
 	
@@ -411,6 +477,10 @@
 
 	
 @media screen and (max-device-width: 1024px) and (min-device-width: 768px)
+
+	.mob_img
+		display: block
+
 
 	// Main page
 
@@ -535,6 +605,7 @@
 	.foot_mnu_line
 		margin-bottom: 10px
 
+	
 	.foot_list 
 		
 		ul 
@@ -961,9 +1032,22 @@
 
 	.service_all
 		width: 100%
+		
+
 
 	.serv_nav
 		width: 100%
+
+		.eigh_type, .sev_type
+			padding-left: -50px
+
+		.main_arr
+			z-index: 1
+			display: none
+
+		.mob_wh
+			display: block
+			z-index: 1
 
 		li
 
@@ -974,16 +1058,38 @@
 				left: 100%
 				padding: 5px
 				width: 24px
+				top: 0
+			
+			&.arr_add
+				transform: rotate(180deg)
 
-			.wh_img
-				left: 100%
-				display: block
+			// .wh_img
+			// 	left: 100%
+			// 	display: block
+				// z-index: 2
 
-			.main_arr
-				display: none
+			// .main_arr
+			// 	display: none
+
+		.main_arr5
+			left: 90%!important
+			top: 8px 
+
+		.depth6, .depth7
+			padding-left: 40px
 				
+		.eigh_type, .sev_type
+			position: relative
+		
+		.main_arr6, .main_arr7
+			left: 70%!important
+			top: 5px
 
 		.f_type
+
+			&:hover 
+				.sub_news
+					display: none
 
 			// .mob_wh
 			// 	display: block
@@ -994,9 +1100,10 @@
 				.sub_news
 					display: block
 				
-				img
-					transform: rotate(180deg)
-					top: 0%
+				// img
+				// 	transform: rotate(180deg)
+				// 	top: 0%
+				// 	left: 100%
 
 			&.bl_mob
 				background-color: $blue
@@ -1005,8 +1112,10 @@
 				a
 					color: #fff
 
-					li a img
-						left: 100%
+				li 
+					img
+						right: 100%
+
 
 	.serv_itms 
 		margin-bottom: 20px
@@ -1099,6 +1208,60 @@
 
 	.l_port
 		margin-bottom: 30px
+
+
+	// Contact page
+
+	.cont_resp
+		max-width: 67%
+		padding: 0 0 0 15px
+
+	.cont_itm 
+		
+		h4, p
+			font-size: 14px
+
+		p
+			padding-left: 20px
+
+	.bread_contact
+		position: absolute
+
+	.f_contact 
+		max-width: 330px
+		padding: 60px 0 0 20px
+		
+		input
+			max-width: 146px
+			
+		input, textarea
+			font-size: 14px
+			padding: 3px 0 3px 10px
+
+		.inp_wr
+			max-width: 146px
+			margin-bottom: 20px
+		
+		.view_all
+			max-width: 100%
+
+		.f_top 
+			
+			p
+				font-size: 18px 
+				margin-bottom: 0
+
+	.cont_inf_wr
+		width: 48%
+		padding: 50px 50px 30px 50px
+
+	.an_comp h5
+		width: 95%
+		font-size: 14px
+		line-height: 1.4
+
+	.map
+		height: 450px
 
 
 @media screen and (max-device-width: 768px) and (min-device-width: 570px)
@@ -1665,6 +1828,8 @@
 
 		// Services
 
+	// Services
+
 	.main_services 
 		
 		.response_cl
@@ -1676,13 +1841,90 @@
 
 	.service_all
 		width: 100%
+		
 
-		.button
-			margin-top: 20px
 
 	.serv_nav
 		width: 100%
-		text-align: center
+
+		.eigh_type, .sev_type
+			padding-left: -50px
+
+		.main_arr
+			z-index: 1
+			display: none
+
+		.mob_wh
+			display: block
+			z-index: 1
+
+		li
+
+			a
+				font-size: 18px
+
+			img
+				left: 100%
+				padding: 5px
+				width: 24px
+				top: 0
+			
+			&.arr_add
+				transform: rotate(180deg)
+
+			// .wh_img
+			// 	left: 100%
+			// 	display: block
+				// z-index: 2
+
+			// .main_arr
+			// 	display: none
+
+		.main_arr5
+			left: 90%!important
+			top: 8px 
+
+		.depth6, .depth7
+			padding-left: 40px
+				
+		.eigh_type, .sev_type
+			position: relative
+		
+		.main_arr6, .main_arr7
+			left: 70%!important
+			top: 5px
+
+		.f_type
+
+			&:hover 
+				.sub_news
+					display: none
+
+			// .mob_wh
+			// 	display: block
+			// 	left: 100%
+
+			&.mob_list
+
+				.sub_news
+					display: block
+				
+				// img
+				// 	transform: rotate(180deg)
+				// 	top: 0%
+				// 	left: 100%
+
+			&.bl_mob
+				background-color: $blue
+				padding: 10px 27px 10px 16px
+
+				a
+					color: #fff
+
+				li 
+					img
+						right: 100%
+
 
 	.serv_itms 
 		margin-bottom: 20px
@@ -1831,6 +2073,72 @@
 
 	.l_port
 		margin-bottom: 30px
+
+	// Contact page
+
+	.cont_resp
+		max-width: 67%
+		padding: 0 0 0 15px
+
+	.cont_itm 
+		
+		h4, p
+			font-size: 12px
+
+		p
+			padding-left: 15px
+
+	.bread_contact
+		position: absolute
+
+	.f_contact 
+		max-width: 280px
+		padding: 60px 0 0 0px
+		
+		input
+			max-width: 135px
+			
+		input, textarea
+			font-size: 12px
+			padding: 3px 0 3px 10px
+
+		.button
+			max-width: 180px
+			padding: 10px 0
+
+		.inp_wr
+			max-width: 135px
+			margin-bottom: 20px
+		
+		.view_all
+			max-width: 100%
+
+		.f_top 
+			
+			p
+				font-size: 16px 
+				margin-bottom: 0
+
+	.cont_inf_wr
+		width: 48%
+		padding: 20px 20px 30px 20px
+
+	.an_comp 
+
+		h5
+			width: 95%
+			font-size: 12px
+			line-height: 1.4
+		
+		img
+			width: 15px
+			height: 15px
+
+	.map
+		height: 350px
+
+	img[src='/img/map.svg']
+		max-width: 40px!important
 		
 	
 
@@ -2514,6 +2822,8 @@
 
 	// Services
 
+		// Services
+
 	.main_services 
 		
 		.response_cl
@@ -2525,24 +2835,101 @@
 
 	.service_all
 		width: 100%
+		
 
-		.button
-			margin-top: 20px
 
 	.serv_nav
 		width: 100%
-		text-align: center
+
+		.eigh_type, .sev_type
+			padding-left: -50px
+
+		.main_arr
+			z-index: 1
+			display: none
+
+		.mob_wh
+			display: block
+			z-index: 1
+
+		li
+
+			a
+				font-size: 18px
+
+			img
+				left: 100%
+				padding: 5px
+				width: 24px
+				top: 0
+			
+			&.arr_add
+				transform: rotate(180deg)
+
+			// .wh_img
+			// 	left: 100%
+			// 	display: block
+				// z-index: 2
+
+			// .main_arr
+			// 	display: none
+
+		.main_arr5
+			left: 90%!important
+			top: 8px 
+
+		.depth6, .depth7
+			padding-left: 40px
+				
+		.eigh_type, .sev_type
+			position: relative
+		
+		.main_arr6, .main_arr7
+			left: 70%!important
+			top: 5px
+
+		.f_type
+
+			&:hover 
+				.sub_news
+					display: none
+
+			// .mob_wh
+			// 	display: block
+			// 	left: 100%
+
+			&.mob_list
+
+				.sub_news
+					display: block
+				
+				// img
+				// 	transform: rotate(180deg)
+				// 	top: 0%
+				// 	left: 100%
+
+			&.bl_mob
+				background-color: $blue
+				padding: 10px 27px 10px 16px
+
+				a
+					color: #fff
+
+				li 
+					img
+						right: 100%
+
 
 	.serv_itms 
 		margin-bottom: 20px
 		
 		img
-			height: 220px	
+			height: 200px	
 
 		.img_text 
 			
 			p
-				font-size: 20px
+				font-size: 18px
 
 				&::after
 					height: 4px
@@ -2673,3 +3060,75 @@
 
 	.l_port
 		margin-bottom: 30px
+
+
+		// Contact page
+
+	.cont_resp
+		max-width: 100%
+		padding: 0 15px
+
+	.cont_itm 
+		
+		h4, p
+			font-size: 12px
+
+		p
+			padding-left: 15px
+
+	.contacts_wrap
+		flex-direction: column
+
+	.bread_contact
+		// position: absolute
+		// flex-direction: column
+
+	.f_contact 
+		max-width: 100%
+		padding: 60px 0 0 0px
+		
+		input
+			max-width: 100%
+			
+		input, textarea
+			font-size: 12px
+			padding: 3px 0 3px 10px
+
+		.button
+			max-width: 100%
+			padding: 10px 0
+
+		.inp_wr
+			max-width: 48%
+			margin-bottom: 20px
+		
+		.view_all
+			max-width: 100%
+
+		.f_top 
+			
+			p
+				font-size: 16px 
+				margin-bottom: 0
+
+	.cont_inf_wr
+		width: 100%
+		padding: 30px 20px 40px 20px
+
+	.an_comp 
+
+		h5
+			width: 100%
+			font-size: 12px
+			line-height: 1.4
+		
+		img
+			width: 15px
+			height: 15px
+			margin-right: 10px
+
+	.map
+		height: 350px
+
+	img[src='/img/map.svg']
+		max-width: 20px!important

@@ -5,6 +5,7 @@ $(function() {
   // Parallax window
 
   $('.page_title_wr').parallax({imageSrc: '/img/about/about-top-bg.jpg'});
+  // $('.present').parallax({imageSrc: '/img/main/present.jpg'});
 
   // window size
 
@@ -31,17 +32,19 @@ $(function() {
       $('.hide_mnu').removeClass('hide_mnu');
       $('#drop_img').removeClass('main_arr');
       $('#wh_bt').addClass('wh_img');
+      $('.serv_nav #drop_img').addClass('arr_add');
     })
 
     $('.close_mob img').click(function() {
       $('.f_type').addClass('bl_mob');
+      $('.f_type').removeClass('mob_list');
       $(this).addClass('hide_mnu');
       $('#drop_img').addClass('main_arr');
       $('#wh_bt').removeClass('wh_img');
       $('.fo_type').removeClass('sub_cl3');      
-      $('.T_type').removeClass('sub_cl2');      
-      $('.f_type').removeClass('mob_list');      
-      // $('.main_services #wh_bt').css('display', 'none');      
+      $('.T_type').removeClass('sub_cl2');
+      $('.serv_nav').find('.f_type').removeClass('mob_list');      
+                 
     })
 
 
@@ -219,7 +222,14 @@ $(function() {
 
   $('.news_seo').click(function(e) {
     // e.prevenrDefault();
+    $(this).toggleClass('chg_label');
+    $(this).hasClass('chg_label') ? $(this).text('Скрыть') : $(this).text('Подробнее'); 
     $('.seo_wr').slideToggle();
+  })
+
+  $('.under_line').click(function(e) {
+    e.preventDefault();
+    $('.hide_more').slideToggle();
   })
 
 
@@ -266,6 +276,118 @@ $(function() {
     $(this).toggleClass('arr_rev');
   })
 
+  // hide contact items
+
+  $('.img_tog').click(function() {
+    $(this).toggleClass('up_img');
+    $(this).parent().parent().find('.hide_bl').slideToggle();
+  })
+
+  // Adding Animation
+  
+  if ($(window).width() > 1024) {
+
+      /* FOR MAIN PAGE */
+    
+    $('.head-all').attr('data-aos', 'fade-right').attr('data-aos-duration', '1000');
+    $('.act_descr').attr('data-aos', 'fade-up').attr('data-aos-delay', '200').attr('data-aos-duration', '1000');
+    $('.act_img').attr('data-aos', 'flip-right').attr('data-aos-delay', '200').attr('data-aos-duration', '1000');
+    
+    $('.main_itms .itm:nth-child(1)').attr('data-aos', 'zoom-in-down').attr('data-aos-duration', '700');
+    $('.main_itms .itm:nth-child(2)').attr('data-aos', 'zoom-in-down').attr('data-aos-delay', '200').attr('data-aos-duration', '700');
+    $('.main_itms .itm:nth-child(3)').attr('data-aos', 'zoom-in-down').attr('data-aos-delay', '400').attr('data-aos-duration', '700');
+    $('.main_itms .itm:nth-child(4)').attr('data-aos', 'zoom-in-down').attr('data-aos-delay', '600').attr('data-aos-duration', '700');
+    $('.main_itms .itm:nth-child(5)').attr('data-aos', 'zoom-in-down').attr('data-aos-delay', '800').attr('data-aos-duration', '700');
+    
+    $('.news_bl .new:nth-child(1)').attr('data-aos', 'flip-left').attr('data-aos-delay', '200').attr('data-aos-duration', '1300');
+    
+    $('.more_cnt h2').attr('data-aos', 'fade-down').attr('data-aos-duration', '1400');
+    
+    $('.more_cnt p').each(function(index) {
+      $(this).attr('data-aos', 'fade-right').attr('data-aos-delay', index * 300).attr('data-aos-duration', '1400');
+    })
+
+      /* FOR ABOUT PAGE */
+
+    $('.license_slider').attr('data-aos', 'fade-up').attr('data-aos-duration', '1600');
+    $('.career_desc').attr('data-aos', 'zoom-in-up').attr('data-aos-duration', '1600');
+
+    $('.career_itm').each(function(index) {
+      $(this).attr('data-aos', 'flip-left').attr('data-aos-delay', index * 400).attr('data-aos-duration', '1500');
+    })
+
+    $('.about_article p').each(function(index) {
+      $(this).attr('data-aos', 'fade-right').attr('data-aos-duration', '1000');
+    })
+
+    $('.catal_itm').each(function(index) {
+      $(this).attr('data-aos', 'fade-down').attr('data-aos-duration', '1000');
+    })
+
+      /* PROJECT OPEN PAGE */
+
+    $('.potr_itm').each(function(index) {
+      $(this).attr('data-aos', 'fade-down').attr('data-aos-delay', index * 300).attr('data-aos-duration', '1000');
+    })      
+
+    $('.proj_cnt_desc p').each(function(index) {
+      $(this).attr('data-aos', 'fade-right').attr('data-aos-duration', '1000');
+    })
+
+    $('.anim_itms').attr('data-aos', 'zoom-in-up').attr('data-aos-duration', '1300');
+    
+    $('#callback').attr('data-aos', 'fade-right').attr('data-aos-duration', '1300');
+    
+    $('.fact_img').attr('data-aos', 'fade-up').attr('data-aos-duration', '1300');
+
+    $('.serv_cnt_desc *').each(function(index) {
+      $(this).attr('data-aos', 'fade-right').attr('data-aos-duration', '1300'); // for all elements unside div
+    })
+
+    $('.cont_inf_wr').attr('data-aos', 'fade-left').attr('data-aos-delay', '1000').attr('data-aos-duration', '1300');
+    
+    $('.form_contact_wr').attr('data-aos', 'fade-right').attr('data-aos-delay', '1000').attr('data-aos-duration', '1300');
+    
+    $('.map').attr('data-aos', 'zoom-in-up').attr('data-aos-duration', '1300');
+
+  }
+
+
+  // $('.more_cnt p').attr('data-aos', 'fade-down').attr('data-aos-duration', '1400');
+  // $('.more_cnt h2').attr('data-aos', 'fade-down').attr('data-aos-duration', '1400');
+
+  
+  
+  var myObject = {
+    prop1: 0,
+    prop2: '0',
+    prop3: 0
+  }
+
+  
+  
+    $(window).scroll(function() { 
+      $('.count').each(function(index){ 
+       var imagePos = $(this).offset().top; 
+       var topOfWindow = $(window).scrollTop();
+       if (imagePos < (topOfWindow + 400) ) { 
+        anime({
+          targets: myObject,
+          prop1: 25,
+          prop2: '200+',
+          prop3: 3,
+          easing: 'linear',
+          round: 1,
+          duration: 2000,
+          update: function() {
+            $('.count1').text(myObject.prop1);
+            $('.count2').text(myObject.prop2);
+            $('.count3').text(myObject.prop3);
+          }
+        });
+       } 
+      }); 
+    }); 
   
 
   // Preloader 
@@ -515,18 +637,19 @@ $(function() {
 
   // $("img, a").on("dragstart", function(event) { event.preventDefault(); });
 
+  $(window).on('load', function() {
+  
+    $('.container_preload').delay(1000).fadeOut();
+  
+      AOS.init({
+        once: true
+      });
+  
+  });
 
 
 });
 
-$(window).on('load', function() {
-
-  $('.container_preload').delay(1000).fadeOut();
-
-//     AOS.init({
-//       once: true
-//     });
-});
 
 function factory(){
   var GreenTallerBuilding = document.getElementsByClassName('GreenTallerBuilding');

@@ -102,6 +102,7 @@ section
 
 .under_line
 	position: relative
+	cursor: pointer
 	padding-bottom: 20px
 	transition: all .3s ease
 	&::after
@@ -175,10 +176,13 @@ body
 	padding: 15px 0
 	text-align: center
 	text-decoration: none
+	transition: all .3s ease
 
-	&:hover
+	&:hover, &:focus, &:active
 		text-decoration: none
 		color: #fff
+		@include blueShadow()
+		background-color: darken($blue, 5%)
 
 
 .butt_bl
@@ -351,7 +355,7 @@ body
 		width: 15px
 		position: absolute
 		top: 2px
-		right: 40%
+		right: 51%
 
 	.deep_itm
 		display: none
@@ -768,6 +772,9 @@ body
 		transform: translateX(-50%)
 		left: 50%
 		text-align: center
+	
+	.hide_more
+		display: none
 
 	h2
 		font-size: 36px
@@ -887,6 +894,12 @@ body
 
 
 // mmenu
+
+.mm-btn
+	top: -10px
+
+.mm-listitem .mm-btn_next
+	right: 7px
 
 .mm-navbar 
 	position: relative
@@ -1243,6 +1256,8 @@ html.mm-wrapper_opened
 .career_itm
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25)
 	position: relative
+	margin-top: 0
+	transition: all .3s ease		
 
 	img
 		max-width: 100%
@@ -1268,6 +1283,27 @@ html.mm-wrapper_opened
 		@include MyrMed()
 		font-size: 21px
 		color: #000
+		position: relative
+		// padding-bottom: px
+		display: inline-block
+
+		&::after
+			content: ''
+			width: 0%
+			position: absolute
+			height: 2px
+			background-color: $blue
+			transition: all .3s ease
+			left: 50%		
+			bottom: 0
+
+		&:hover
+			text-decoration: none
+			color: $blue
+
+			&::after
+				width: 100%
+				left: 0
 
 .catalog
 	padding: 100px 0
@@ -1355,7 +1391,13 @@ html.mm-wrapper_opened
 
 	.bread_new.response_cl
 		max-width: 1440px
-		
+
+.remove_img
+	display: none	
+
+.mob_img
+	display: none
+
 .all_news_wr
 	display: flex
 	justify-content: flex-end
@@ -1618,6 +1660,11 @@ html.mm-wrapper_opened
 	img
 		display: block
 		width: 25px
+		transition: all .3s ease
+		transform: scale(1)
+
+		&:hover
+			transform: scale(1.2) translateY(-5px)
 
 
 
@@ -1914,8 +1961,8 @@ html.mm-wrapper_opened
 			position: absolute
 			padding: 8px
 			left: -30px
-			top: 50%
-			transform: translateY(-50%)
+			// top: 50%
+			// transform: translateY(-50%)
 
 		.sub_news
 			display: none
@@ -1950,6 +1997,16 @@ html.mm-wrapper_opened
 		.depth5, .depth6, .depth7
 			display: none
 
+.six_type
+	position: relative
+
+.main_arr5
+	left: -20px!important
+
+.main_arr7, .main_arr6
+	left: -0px!important
+
+
 
 .depth5
 
@@ -1960,7 +2017,7 @@ html.mm-wrapper_opened
 	
 	&.arr_rev
 		transform: rotate(180deg)
-		top: -30%
+		left: -20px
 
 .depth6
 
@@ -1971,7 +2028,6 @@ html.mm-wrapper_opened
 	
 	&.arr_rev
 		transform: rotate(180deg)
-		top: -30%
 
 .depth7
 
@@ -1982,7 +2038,6 @@ html.mm-wrapper_opened
 	
 	&.arr_rev
 		transform: rotate(180deg)
-		top: -30%
 		
 
 
@@ -2373,6 +2428,295 @@ html.mm-wrapper_opened
 	width: 100% 
 	height: 756px
 	
+.s_contacts
+	// padding: 30px 0 0
+
+.form_contact_wr
+	// padding: 120px 0 175px 120px
+
+.bread_contact
+	max-width: 1440px
+	position: absolute
+	width: 100%
+	top: 20px
+	left: 50%
+	transform: translateX(-50%)
+	display: flex
+	justify-content: flex-start
+
+.cont_resp
+	max-width: 50%
+	width: 100%
+	// border: 1px solid #000
+
+
+.contacts_wrap
+	position: relative
+	// padding-top: 30px
+	display: flex
+	justify-content: flex-end
+
+// .bread_contact
+// 	width: 50% 
+
+.cont_inf_wr
+	width: 50%
+	height: 100%
+	position: relative
+	right: 0
+	top: 0
+	bottom: 0
+	background-color: $blue
+	color: #fff
+	padding: 100px 0 100px 100px 
+
+.cont_itm
+	margin-bottom: 20px
+
+	h4
+		font-size: 16px
+		@include MyrBold()
+	
+	p
+		font-size: 16px
+		margin-bottom: 0px
+		padding-left: 30px
+
+.an_comp
+
+	.hide_bl
+		display: none
+	
+	h5
+		border-top: 1px solid #fff
+		font-size: 16px
+		@include MyrBold()
+		max-width: 570px
+		width: 100%
+		margin: 0
+		padding: 20px 0
+		display: flex
+		justify-content: space-between
+
+	img
+		transition: all .3s ease
+		width: 20px
+		height: 20px
+		margin-right: 20px
+
+		&.up_img
+			transform: rotate(180deg)
+
+
+.f_contact
+	max-width: 630px
+	width: 100%
+	padding: 120px 0 0px 120px
+
+	&.form_success
+		background-color: $blue
+
+	.f_wr
+		// display: none
+
+	.f_top
+
+		p
+			color: $blue
+			@include MyrMed()
+			font-size: 20px
+			text-transform: uppercase
+			// margin: 0 80px 0 0
+
+	.f_cnt
+		padding: 20px 0 60px 0
+		display: flex
+		flex-direction: column
+		// align-items: center
+
+	.f_row
+		display: flex
+		width: 100%
+		justify-content: space-between
+
+
+	input, textarea
+		width: 100%
+		outline: none
+		border: 2px solid #c4c4c4
+		padding: 0 0 5px 20px
+		display: block
+		color: $text
+		font-size: 18px
+
+		&::placeholder
+			color: $text
+
+	input
+		max-width: 240px
+		width: 100%
+
+	textarea
+		width: 100%
+
+	.button
+		box-shadow: 0 0px 20px rgba(21,77,164,.25)
+		color: #fff
+		max-width: 210px
+		border: none
+		padding: 15px 0
+		border-bottom: none
+		margin-bottom: 20px
+		margin-top: 0px
+
+	.inp_wr
+		max-width: 240px
+		width: 100%
+		position: relative
+		margin-bottom: 30px
+
+	.view_all
+		max-width: 100%
+
+.effect-8 ~ .focus-border:before,
+.effect-8 ~ .focus-border:after
+	content: ""
+	position: absolute
+	top: 0
+	left: 0
+	width: 0
+	height: 2px
+	background-color: #3399FF
+	transition: 0.3s
+				
+.effect-8 ~ .focus-border:after
+	top: auto
+	bottom: 0 
+	left: auto
+	right: 0
+
+.effect-8 ~ .focus-border i:before,
+.effect-8 ~ .focus-border i:after
+	content: "" 
+	position: absolute 
+	top: 0 
+	left: 0 
+	width: 2px 
+	height: 0 
+	background-color: #3399FF 
+	transition: 0.4s
+
+.effect-8 ~ .focus-border i:after
+	left: auto 
+	right: 0 
+	top: auto 
+	bottom: 0
+
+.effect-8:focus ~ .focus-border:before,
+.effect-8:focus ~ .focus-border:after
+	width: 100% 
+	transition: 0.3s
+
+.effect-8:focus ~ .focus-border i:before,
+.effect-8:focus ~ .focus-border i:after
+	height: 100% 
+	transition: 0.4s
+
+// main itms svg animation
+
+
+.smoke
+	animation: smoke 2s linear infinite
+
+.conv
+	animation: conv 2s linear infinite
+
+.worker
+	animation: worker 2s linear infinite
+
+.plan
+	transform-origin: center
+	animation: plan 3s linear infinite
+
+.plan1
+	animation: plan1 2s linear infinite
+
+.wheel
+	transform-origin: center
+	animation: wheel 2s linear infinite
+
+
+
+@keyframes wheel
+	0%
+		transform: rotate(30deg)
+
+	50%
+		transform: rotate(90deg)
+
+	100%
+		transform: rotate(30deg)	
+
+@keyframes plan
+	0%
+		transform: scale(.7)
+
+	50%
+		transform: scale(1)
+
+	100%
+		transform: scale(.7)
+
+@keyframes plan1
+	0%
+		transform: translateX(-2px)
+
+	25%
+		transform: translateX(0px)
+
+	50%
+		transform: translateX(2px)
+
+	75%
+		transform: translateX(0)
+
+	100%
+		transform: translateX(-2px)
+
+@keyframes smoke
+	0%
+		transform: translateX(0px) 
+
+	50%
+		transform: translateX(-5px)
+
+	100%
+		transform: translateX(0px)
+
+@keyframes conv
+	0%
+		transform: translateY(0px) 
+
+	50%
+		transform: translateY(5px)
+
+	100%
+		transform: translateY(0px)
+
+@keyframes worker 
+	0%
+		transform: translate(0px, 0px)
+
+	50%
+		transform: translate(0px, -5px)
+	
+	100%
+		transform: translate(0px, 0px)
+
+	
+
+
+
 
 		
 		

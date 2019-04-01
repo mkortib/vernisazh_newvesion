@@ -50,6 +50,7 @@ gulp.task('js', function() {
 		'app/libs/parallax/parallax.min.js',
 		'app/libs/jQuery-Mask-Plugin-master/dist/jquery.mask.min.js',
 		'app/libs/aos/aos.js',
+		'app/libs/anime.js/anime.min.js',
 		'app/js/common.js', // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))
