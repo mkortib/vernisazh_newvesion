@@ -7,7 +7,7 @@
 /***************** MIXINS **************/
 
 @mixin blueShadow()
-	box-shadow: 0px 10px 50px rgba(32, 51, 113, 0.25);
+	box-shadow: 0px 10px 50px rgba(32, 51, 113, 0.25)
  
 /*********************** CUSTOM FONTS *****************************/
 
@@ -86,17 +86,111 @@ body
 	width: 100%
 	display: inline-block 	
 	font-size: 18px
-	color: #fff
-	padding: 15px 0
+	padding: 12px 0
 	text-align: center
 	text-decoration: none
 	transition: all .3s ease
+	line-height: 1
 
 	&:hover, &:focus, &:active
-		text-decoration: none
 		color: #fff
-		@include blueShadow()
-		background-color: darken($blue, 5%)
+		text-decoration: none
+		background-color: $blue
+		box-shadow: 0px 0px 45px rgba(0, 0, 0, 0.25)
+
+.butt_wh
+	color: $blue
+	border: 2px solid $blue
+	background-color: #fff
+
+.butt_bl
+	color: #fff
+	background-color: $blue
+	box-shadow: 0px 0px 45px rgba(0, 0, 0, 0.25)
+
+.button-2
+	max-width: 330px
+	width: 100%
+	height: 50px
+	border: 2px solid #fff
+	text-align: center
+	cursor: pointer
+	position: relative
+	box-sizing: border-box
+	overflow: hidden
+
+	span
+		position: relative
+		top: 5px
+		padding-left: 10px
+
+	svg
+
+		path
+
+			transition: all .3s ease
+
+.button-2 a
+	font-size: 18px
+	color: #fff
+	text-decoration: none
+	line-height: 50px
+	transition: all .5s ease
+	z-index: 2
+	position: relative
+
+.eff-2
+	width: 100%
+	height: 50px
+	top: -50px
+	background: #fff
+	position: absolute
+	transition: all .5s ease
+	z-index: 1
+
+.button-2:hover .eff-2
+	top: 0
+
+.button-2:hover a
+	color: $blue
+	
+.button-2:hover path
+		fill: $blue
+
+
+
+// 
+.hover1
+
+	&:before, &:after 
+		content: ''
+		position: absolute
+		width: 0%
+		height: 1px
+		bottom: 0
+		background: $blue
+
+
+	&:before 
+		left: 0
+
+	&:after 
+		right: 0
+		background: $blue
+		transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1)
+
+
+	&:hover:before 
+		background: $blue
+		width: 100%
+		transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1)
+
+
+	&:hover:after 
+		background: transparent
+		width: 100%
+		transition: 0s
+
 
 
 
@@ -201,8 +295,7 @@ body
 
 		.sub_bl
 			height: 80px
-			display: block			
-
+			display: block
 
 .tel_icon	
 	width: 20px
@@ -221,20 +314,770 @@ body
 		background-color: $blue
 		padding: 0 0 5px
 		border-radius: 6px
+		z-index: 5
+
+
+.menu_itms
+	background-color: #fff
+	padding: 20px 0
+
+	.logo
+		width: 150px
+		height: auto
+
+	.button
+		font-size: 14px
+
+.mnu
+	width: 100%
+
+	ul
+		display: flex 
+		justify-content: space-between
+
+	a
+		position: relative
+		display: block
+		padding: 0 0 2px
+		line-height: 1.5
+
+		&:hover
+			color: $blue
+			text-decoration: none
+
+
+		&:before, &:after 
+			content: ''
+			position: absolute
+			width: 0%
+			height: 1px
+			bottom: 0
+			background: $blue
+
+
+		&:before 
+			left: 0
+
+		&:after 
+			right: 0
+			background: $blue
+			transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1)
+
+
+		&:hover:before 
+			background: $blue
+			width: 100%
+			transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1)
+
+
+		&:hover:after 
+			background: transparent
+			width: 100%
+			transition: 0s
 
 
 
- 
+.top_sect
+	width: 100%
+	display: flex
+	height: calc(100vh - 128px)
+
+	> div
+		width: 50%
+		height: 100%
+
+	.title_wr
+		background-image: url('../img/main/bg-dotted.jpg')
+		background-size: cover
+		background-position: center
+		display: flex
+		align-items: center
+		justify-content: center
+
+	.bg_bl
+		height: calc(100vh - 128px)
+
+		&:nth-child(1)
+			background-image: url('../img/main/bg1.jpg')
+			background-size: cover
+			background-position: center
+
+		&:nth-child(2)
+			background-image: url('../img/main/bg1.jpg')
+			background-size: cover
+			background-position: center
+
+.title_compos
+	margin-top: 100px
+	max-width: 530px
+	width: 100%
+	color: #fff
+	margin-left: 5%
+
+	h2
+		font-size: 36px
+		@include MontReg()
+		line-height: 1.4
+		text-transform: uppercase
+
+	p
+		font-size: 16px
+		padding: 45px 0
+		margin: 0
+		max-width: 500px
 
 
+.soc
+	display: flex
+	text-transform: uppercase
+	font-size: 14px
+	margin-top: 120px
+
+	> div
+		padding-right: 20px
+
+	a
+		color: #fff
+		position: relative
+
+		&:hover, &:focus, &:active
+			text-decoration: none
+
+	img
+		width: 20px
+		margin: 0 15px
 
 
+.slick-slide
+	outline: none
+
+.bg_wr
+	position: relative
+
+	.arr_next
+		background-color: $blue
+		max-width: 90px
+		width: 100%
+		padding: 10px
+		position: absolute
+		top: 50%
+		left: 0
+		cursor: pointer
+
+		img
+			width: 20px
+			height: auto
+			position: relative
+			left: 20px
 
 
+.main_about
+	padding: 100px 0
+
+	.img_bl
+
+		img
+			max-width: 100%
+			display: block
+			height: auto
+			margin: auto
 
 
+.line_title
+		position: absolute
+		left: -88px
+		transform: rotate(-90deg)
+		top: 80px
+		@include MontBold()
+		font-size: 18px
+		text-transform: uppercase
+		color: $blue
 
+		span
+			position: relative
+
+			&::after
+				position: absolute
+				width: 35px
+				height: 2px
+				background-color: $blue
+				content: ''
+				left: -220px
+				top: 50%
+				transform: translateY(-50%)
+
+.first_title
+	position: relative
+
+	.fix_bl
+		max-width: 450px
+		width: 100%
+		margin: auto
+
+	p
+		color: $text
+		font-size: 16px
+		line-height: 1.4
+		text-align: justify	
+		margin-top: 50px
+
+	.title_bold
+		display: flex
+		
+		h2
+			@include MontBold()
+			line-height: 1.4
+			color: $blue
+			font-size: 24px
+			padding-left: 30px
+
+		img
+			display: block
+			width: 87px
+			height: auto
+
+.scnd_bl
+	padding-top: 70px
+
+.about_ico
+	max-width: 500px
+	margin: auto
+
+.ico_bl
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: center
+	padding-top: 30px
+
+	img
+		width: 60px
+		height: auto
+
+	p
+		text-align: center
+		font-size: 12px
+		color: $text
+		max-width: 130px
+		line-height: 1.4
+		padding-top: 20px
+
+.desc_comp
+	position: relative
+	padding: 100px 0
+
+	&::after
+		position: absolute
+		width: 100%
+		content: ''
+		height: 100%
+		left: 0
+		bottom: 0
+		right: 0
+		top: 0
+		background-color: rgba($blue, .9)
+		z-index: 1
+
+.response_cl
+	z-index: 3
+	position: relative
+
+.l_desc
+
+	h3
+		color: #fff
+		@include MontBold()
+		font-size: 30px
+		line-height: 1.4
+
+	.txt_start
+		color: #fff
+		font-size: 18px
+		line-height: 1.5
+		max-width: 330px
+
+	.txt_about
+		padding: 15px 0
+
+.num_center
+	display: flex
+	align-items: center
+
+.numb_itm
+	color: #fff
+
+	span
+		font-size: 50px
+		@include MontBold()
+
+	p
+		font-size: 24px
+
+.main_flat_wr
+	width: 100%
+	display: flex
+	position: relative
+
+.main_flat_r
+	width: 90%
+
+.flat_displ
+	padding: 100px 0
+	// background-color: $blue
+	// color: #fff
+
+.line_wr
+	position: relative
+	width: 10% 
+
+
+.main_flat_nav
+	position: relative
+	background-color: $blue
+	color: #fff
+	padding: 70px 0
+
+.s_pad
+	padding: 100px 0
+
+.for_flat_cng
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 100%
+
+	p
+		margin: 0
+		text-align: right
+
+.flat_chng
+	border: 2px solid #fff
+	max-width: 100%
+	cursor: pointer
+
+	&:hover
+		background-color: #fff
+		color: $blue
+
+.cnt_itms
+	display: flex
+	align-items: center
+
+
+.line_wr
+
+	.line_title
+
+		span
+			left: -40px
+
+.flat_sort
+	padding-top: 40px
+	position: relative
+
+	.slick-slide
+		padding: 44px
+
+
+.slide_flat
+	padding: 25px 50px
+	box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.25)
+
+	.fl_img
+		display: flex
+		align-items: center
+
+
+	.top_txt
+		display: flex
+		justify-content: space-between
+		padding-bottom: 40px
+
+		h4
+			@include MontBold()
+			font-size: 24px
+			color: $text
+
+		p
+			text-align: right
+			margin: 0
+
+	img
+		max-width: 100%
+		display: block
+		height: auto
+		margin: 0px auto
+
+	.button
+		margin-top: 40px
+		text-transform: uppercase
+		max-width: 100%
+		border: 2px solid $blue
+			
+.l_arr
+	transform: rotate(180deg)
+
+.r_arr
+	transform: rotate(-180deg)
+
+.fl_arr
+
+	img
+		width: 35px
+		height: auto
+
+	.l_arr, .r_arr
+		cursor: pointer
+		position: absolute
+		top: 55%
+		transform: translateY(-50%)
+
+	.l_arr
+		left: -40px
+		transform: translateY(-50%)
+
+	.r_arr
+		right: -40px
+		transform: translateY(-50%) rotate(-180deg)
+
+.info_half1
+
+	img
+		width: 310px
+		height: auto
+
+	h5
+		font-size: 24px
+		line-height: 1.5
+		padding-top: 30px
+		color: #fff
+		@include MontBold()
+
+.half_end
+	display: flex
+	align-items: flex-end		
+
+.info_half2
+	text-align: right
+	font-size: 20px
 	
+	a
+		color: #ffffff
+		margin-bottom: 15px
+		text-decoration: none
+		display: block
+		transition: all .3s ease
 
+		&:hover
+			color: rgba(#fff, .7)
+
+	p
+		color: #ffff
+		margin: 0
+
+.popups_but
+	padding-top: 60px
+	display: flex
+	justify-content: space-between
+
+.cond_wr
+	display: flex
+	width: 100%
+
+.line_wr
+	width: 10%
+
+
+.condition
+
+	.line_title
+		
+		span
+			left: 18px
+		
+.cond_l
+
+	.top_numb
+		padding: 30px 100px 30px 30px
+		background-color: $blue
+		color: #fff
+		display: flex
+		justify-content: space-between
+
+	.itm_1
+		@include MontBold()
+		display: flex
+		max-width: 255px
+		justify-content: space-between
+		align-items: center
+
+		h4
+			font-size: 72px
+			line-height: 1.5
+			margin: 0
+
+		p
+			font-size: 24px
+			line-height: 1.4
+			margin: 0
+			max-width: 130px
+			padding-left: 20px
+
+	.cond_txt
+		padding: 60px 0 0
+
+		p
+			max-width: 440px
+
+.cond_r
+	width: 90%
+
+
+.cont_r
+	position: relative
+	height: 100%
+	left: -30px
+
+	&::after
+		position: absolute
+		content: ''
+		background-image: url('../img/main/condition.jpg')
+		background-size: cover
+		background-position: center
+		left: 0
+		bottom: 0
+		right: 0
+		top: 0
+
+	.top_numb2
+		display: inline-block
+		background-color: #fff
+		padding: 30px
+		position: relative
+		z-index: 3
+
+	.itm_2
+		color: $blue
+		@include MontBold()
+		display: flex
+		max-width: 255px
+		justify-content: space-between
+		align-items: center
+
+		h4
+			font-size: 72px
+			line-height: 1.5
+			margin: 0
+
+		p
+			font-size: 24px
+			line-height: 1.4
+			margin: 0
+			max-width: 130px
+			padding-left: 20px
+
+
+
+.input-container
+	position: relative
+	z-index: 2
+	padding: 20px 0 0px
+	text-align: center
+	margin-bottom: 10px
+	
+	label
+		font-weight: 500
+		
+		.label-text
+			display: block
+			color: $blue
+			cursor: text
+			font-size: 18px
+			line-height: 20px
+			transform: translateY(-34px)
+			transition: all 0.3s
+			
+	input, textarea
+		background-color: transparent
+		border: 0
+		border-bottom: 2px solid $blue
+		color: $blue
+		font-size: 18px
+		letter-spacing: -1px
+		outline: 0
+		padding: 5px 20px
+		text-align: center
+		transition: all 0.3s
+		width: 100%	
+		
+		&:focus 
+			border-bottom: 2px solid $blue
+			color: $blue
+
+			& + .label-text
+				color: $blue
+				font-size: 13px
+				transform: translateY(-64px)
+			
+		&.value-exists + .label-text
+			font-size: 13px
+			transform: translateY(-64px)
+
+
+.s_quest
+
+	.order_mess, .quest_txt
+		display: flex
+		padding: 45px 0
+
+	.quest_wr
+		width: 100%
+		display: flex
+		box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.25)
+
+	.order_mess
+		width: 70%
+		justify-content: space-around
+		align-items: center
+		padding: 45px 0 20px
+
+		.input-container
+			text-align: left
+			padding: 0
+			margin: 0
+			max-width: 208px
+			height: 40px
+
+			label .label-text
+				font-size: 16px
+
+			input.value-exists+.label-text
+				font-size: 13px
+
+			input:focus+.label-text
+				font-size: 13px
+
+
+			label
+				margin: 0
+				height: 40px
+
+			input
+				text-align: left
+				font-size: 16px
+				padding: 5px 0
+
+		.button
+			max-width: 330px
+			display: flex
+			align-items: center
+			justify-content: center
+			border: 2px solid $blue
+			
+			span
+				margin-left: 13px
+			
+			path
+				transition: all .3s ease
+
+			&:hover
+				background-color: #fff
+				color: $blue
+
+				path
+					fill: $blue
+			
+
+	.quest_txt
+		width: 30%
+		color: #fff
+		flex-direction: column
+		align-items: center
+		background-color: $blue
+
+
+		h4
+			font-size: 24px
+			@include MontBold()
+
+		h4, p
+			margin: 0
+			line-height: 1.6
+
+
+// Footer
+
+
+.main_foot
+	background-color: $blue
+	padding: 20px 0
+
+	.soc
+		margin: 0 auto
+
+	.cnt_itm
+		display: flex
+		align-items: center
+
+	.present_down
+		
+		a
+			color: #fff
+			text-decoration: none
+			font-size: 12px
+
+		img
+			padding-left: 10px
+
+		span
+			position: relative
+			padding-bottom: 1px
+
+			&::after
+				content: ''
+				width: 100%
+				height: 1px
+				bottom: 0
+				left: 0
+				background-color: #fff
+				position: absolute
+
+	.wsf
+		width: 100%
+		opacity: .6
+		transition: all .3s ease
+		cursor: pointer
+
+		&:hover
+			opacity: 1
+
+
+
+
+
+
+
+/** MASK INVALID **/ 
+.incomplete
+	animation: invalid 1s linear infinite
+	-webkit-animation: invalid 1s linear infinite
+	-moz-animation: invalid 1s linear infinite
+	-o-animation: invalid 1s linear infinite
+	
+@-webkit-keyframes invalid 
+	0% 
+		border-bottom: 1px solid #FFF
+	50% 
+		border-bottom: 1px solid #f00
+	100% 
+		border-bottom: 1px solid #FFF
+
+@keyframes invalid 
+	0% 
+		border-bottom: 1px solid #FFF
+	50% 
+		border-bottom: 1px solid #f00
+	100% 
+		border-bottom: 1px solid #FFF
 
 @import "media" // Always at the end

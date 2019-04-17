@@ -1,5 +1,55 @@
 $(function() {
 
+
+
+
+  // parallax on mian page 
+
+  $('.desc_comp').parallax({imageSrc: '/img/main/bg-1920.jpg'});
+
+  // Equal Height for flat img
+  
+  $('.fl_img').equalHeights();
+
+
+  $('.main_slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    infinite: true,
+    rows: 0,
+    dots: false,
+    // arrows: false,
+    // prevArrow: false,
+    nextArrow: '.arr_next',
+    prevArrow: false,
+    fade: true,
+    cssEase: 'linear', 
+    speed: 500,
+    autoplaySpeed: 5000
+  });
+
+
+  $('.fl_slider').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    infinite: false,
+    rows: 0,
+    dots: false,
+    prevArrow: '.flat_sort .l_arr',
+    nextArrow: '.flat_sort .r_arr',
+    speed: 500,
+  });
+
+  $('.input-container input').blur(function(event) {
+    var inputVal = this.value;
+    
+    if (inputVal) {
+      this.classList.add('value-exists');
+    } else {
+      this.classList.remove('value-exists');
+    }
+  });
+
  
   // // AOS animation 
 
@@ -174,25 +224,25 @@ $(function() {
 
 
 
-  // $('form :submit').on('click', function () {
-  //     $('input:required').each(function () {
-  //         if (!$(this).val()) $(this).addClass('incomplete');
-  //     });
-  // });
+  $('form :submit').on('click', function () {
+      $('input:required').each(function () {
+          if (!$(this).val()) $(this).addClass('incomplete');
+      });
+  });
 
-  // $('input:required').on('input', function () {
-  //     $(this).removeClass('incomplete');
-  // });
+  $('input:required').on('input', function () {
+      $(this).removeClass('incomplete');
+  });
 
-  // $('input[name=phone]').mask("+38 (999) 999-9999", {
-  //     completed: function () {
-  //         $(this).removeClass('incomplete');
-  //     }
-  // });
+  $('input[name=phone]').mask("+38 (999) 999-9999", {
+      completed: function () {
+          $(this).removeClass('incomplete');
+      }
+  });
 
-  // $('input[name=name]').on('input', function () {
-  //     $(this).val($(this).val().replace(/[0-9\\/^$.|?*+\-_()]/g, ""));
-  // });
+  $('input[name=name]').on('input', function () {
+      $(this).val($(this).val().replace(/[0-9\\/^$.|?*+\-_()]/g, ""));
+  });
 
 
 
