@@ -33,7 +33,7 @@
 
 	<header class="main_header">
 		
-		<div class="top_head">
+		<div class="top_head d-none d-lg-block">
 
 			<div class="response_cl top_head_cnt">
 
@@ -50,13 +50,13 @@
 							</div>
 						</div>
 
-						<div class="col-md-9 d-flex justify-content-center align-items-center">
+						<div class="col-md-8 d-flex justify-content-center align-items-center">
 							<div class="head_addr">
 								<p><i class="fas fa-map-marker-alt"></i>м. Житомир, проспект Незалежності, 29</p>
 							</div>
 						</div>
 
-						<div class="col-md-2 d-flex justify-content-center align-items-center">
+						<div class="col-md-3 d-flex justify-content-end align-items-center">
 							<div class="top_phone">
 								<img src="img/call-answer.svg" alt="телефон" class="tel_icon">
 								<ul class="parent_phone">
@@ -85,12 +85,12 @@
 
 				<div class="row">
 
-					<div class="col-md-2 d-flex align-items-center">
+					<div class="col-7 col-sm-8 col-lg-2 d-flex align-items-center justify-content-center justify-content-lg-start order-2 order-lg-1">
 						<a href="/" class="logo"><img src="img/logo.svg" alt="Вернисаж"></a>
 					</div>
 
-					<div class="col-md-7 d-flex align-items-center">
-						<nav class="mnu">
+					<div class="col-2 col-xl-7 col-lg-8 d-flex align-items-center order-1 order-lg-2">
+						<nav class="mnu d-none d-lg-block">
 							<ul>
 								<li><a href="#">Про комплекс</a></li>
 								<li><a href="#">Про нас</a></li>
@@ -101,10 +101,16 @@
 								<li><a href="#">Контакти</a></li>
 							</ul>
 						</nav>
+						<a class="tel d-block d-lg-none" href="tel:066666666"><img src="img/call-answer-blue.svg" alt=""></a>
 					</div>
 
-					<div class="col-md-3 d-flex align-items-center justify-content-end">
-						<a href="#" class="button butt_wh">Замовити дзвінок</a>
+					<div class="col-3 col-sm-2 col-xl-3 col-lg-2 d-flex align-items-center justify-content-end order-3">
+						<a href="#" class="button butt_wh d-none d-lg-block">Замовити дзвінок</a>
+						<div id="my-menu" class="hamburger hamburger--emphatic js-hamburger d-lg-none">
+							<span class="hamburger-box">
+									<span class="hamburger-inner"></span>
+							</span>
+						</div>
 					</div>
 
 				</div>
@@ -112,6 +118,48 @@
 			</div>
 
 		</div>
+
+		<div class="mob_mnu d-block d-lg-none">
+
+			<div class="mob_wr">
+
+				<nav class="mob_nav">
+					<ul>
+						<li><a href="#">Про комплекс</a></li>
+						<li><a href="#">Про нас</a></li>
+						<li><a href="#">Планування</a></li>
+						<li><a href="#">Новини</a></li>
+						<li><a href="#">Документи</a></li>
+						<li><a href="#">Розстрочка</a></li>
+						<li><a href="#">Контакти</a></li>
+					</ul>
+				</nav>
+
+				<ul class="tel_bl">
+					<li><a href="tel:+380 93 904 0701">+380 93 904 0701</a></li>
+					<li><a href="tel:+380 93 904 0701">+380 93 904 0701</a></li>
+					<li><a href="tel:+380 93 904 0701">+380 93 904 0701</a></li>
+				</ul>
+
+				<p class="mob_addr">м. Житомир, проспект Незалежності, 29</p>
+
+				<div class="mob_lang">
+					<ul class="lang_slide">
+						<li class="active"><a href="#">UA</a></li>
+						<li><a href="#">RU</a></li> 
+					</ul>
+				</div>
+
+				<div class="mob_soc">
+					<a href="#"><img src="img/instagram.svg" alt=""></a>
+					<a href="#"><img src="img/facebook.svg" alt=""></a>
+					<a href="#"><img src="img/telegram.svg" alt=""></a>
+				</div>
+
+			</div>
+
+		</div>
+		
 
 	</header>
 
@@ -137,7 +185,7 @@
 						</svg></span>
 					</a>
 				</div>
-				<div class="soc">
+				<div class="soc d-none d-sm-flex">
 					<div class="icon"><a href="#"><img src="img/instagram.svg" alt=""><span>instagram</span></a></div>
 					<div class="icon"><a href="#"><img src="img/facebook.svg" alt=""><span>facebook</span></a></div>  
 					<div class="icon"><a href="#"><img src="img/telegram.svg" alt=""><span>telegram</span></a></div>
@@ -148,13 +196,11 @@
 		<div class="bg_wr">
 			<div class="main_slider">
 				<div class="bg_bl">
-					<p>sdksdkskdlsldksdl</p>
 				</div>   
 				<div class="bg_bl">
-					<p>sdksdkskdlsldksdl</p>
 				</div>   
 			</div>
-			<div class="arr_next">
+			<div class="arr_next d-none d-sm-block">
 				<img src="img/right-arrow.svg" alt="Вправо">
 			</div>
 		</div>
@@ -167,9 +213,19 @@
 
 			<div class="container">
 
-				<div class="row frst_bl">
+				<div class="line_wr">
+					<div class="line_title">Про комплекс<span></span></div>
+				</div>
 
-					<div class="col-md-6">
+				<div class="row justify-content-center frst_bl">
+					
+					<div class="col-12 d-block d-sm-none mob_h">
+
+						<h4>Про комплекс</h4>
+
+					</div>
+
+					<div class="col-12 col-sm-10 col-lg-6 order-2 order-lg-1">
 						<div class="first_title">
 							<div class="fix_bl">
 								<div class="title_bold">
@@ -178,13 +234,16 @@
 								</div>
 								<p>Концептуально новий, сучасний та яскравий комплекс житлових будинків, що має неординарний та особливий екстер’єр, свою паркову зону, розташовану на даху будівлі, закритий двір з дитячими майданчиками та бесідками, прикрашений квітковими оранжереями.</p>
 							</div>
-							<div class="line_title">Про комплекс<span></span></div>
+							
 						</div>	
 					</div>
 
-					<div class="col-md-6">
+					<div class="col-12 col-sm-10 col-lg-6 order-1 order-lg-2">
 						<div class="img_bl">
 							<img src="img/main/img-small.jpg" alt="жк вернисаж">
+							<div class="img_sub_bl d-lg-none">
+								<img src="img/main/about-sect.jpg" alt="жк вернисаж">
+							</div>
 						</div>
 					</div>
 
@@ -192,48 +251,48 @@
 
 				<!--  -->
 
-				<div class="row scnd_bl">
+				<div class="row justify-content-center scnd_bl">
 
-					<div class="col-md-6">
+					<div class="col-12 col-lg-6 d-none d-lg-block">
 						<div class="img_bl">
 							<img src="img/main/about-sect.jpg" alt="жк вернисаж">
 						</div>
 					</div>
 
-					<div class="col-md-6">
+					<div class="col-12 col-sm-10 col-lg-6">
 						<div class="row about_ico">
-							<div class="col-md-4">
+							<div class="col-md-4 col-sm-6 col-6">
 								<div class="ico_bl">
 									<img src="img/main/about-svg/coffee-shop.svg" alt="">
 									<p>Розвинена інфраструктуру на території комплексу.</p>
 								</div>
 							</div>
-							<div class="col-md-4">
+							<div class="col-md-4 col-sm-6 col-6">
 								<div class="ico_bl">
 									<img src="img/main/about-svg/cctv 2.svg" alt="">
 									<p>Закрита територія, що охороняється.</p>
 								</div>
 							</div>
-							<div class="col-md-4">
+							<div class="col-md-4 col-sm-6 col-6">
 								<div class="ico_bl">
 									<img src="img/main/about-svg/elevator.svg" alt="">
 									<p>2 ліфта, вантажний та пасажирський.</p>
 								</div>
 							</div>
 							<!--  -->
-							<div class="col-md-4">
+							<div class="col-md-4 col-sm-6 col-6">
 								<div class="ico_bl">
 									<img src="img/main/about-svg/park 2.svg" alt="">
 									<p>Озеленений простір для відпочинку на даху.</p>
 								</div>
 							</div>
-							<div class="col-md-4">
+							<div class="col-md-4 col-sm-6 col-6">
 								<div class="ico_bl">
 									<img src="img/main/about-svg/building.svg" alt="">
 									<p>Унікальний екстер’єр</p>
 								</div>
 							</div>
-							<div class="col-md-4">
+							<div class="col-md-4 col-sm-6 col-6">
 								<div class="ico_bl">
 									<img src="img/main/about-svg/house-key.svg" alt="">
 									<p>Широкий вибір квартир різних форматів</p>
@@ -271,27 +330,27 @@
 						</div>
 					</div>
 
-					<div class="col-md-7 num_center">
+					<div class="col-lg-7 col-md-8 num_center">
 
 						<div class="container about_numb">
 
 							<div class="row">
 
-								<div class="col-md-4">
+								<div class="col-md-4 col-sm-4">
 									<div class="numb_itm">
 										<span class="numb_chg">2</span>
 										<p>кількість секцій</p>
 									</div>
 								</div>
 
-								<div class="col-md-4">
+								<div class="col-md-4 col-sm-4">
 									<div class="numb_itm">
 										<span class="numb_chg">20</span>
 										<p>кількість поверхів</p>
 									</div>
 								</div>
 
-								<div class="col-md-4">
+								<div class="col-md-4 col-sm-4">
 									<div class="numb_itm">
 										<span class="numb_chg">158</span>
 										<p>кількість квартир</p>
@@ -322,42 +381,68 @@
 
 				<div class="main_flat_r">
 
+					<div class="container cont_mob">
+
+						<div class="row">
+	
+							<div class="col-12 d-block d-sm-none mob_h">
+	
+								<h4>Наші планування</h4>
+		
+							</div>
+	
+						</div>
+	
+					</div>
+
 					<div class="main_flat_nav">
 
 						<div class="container">
 
 							<div class="row justify-content-center">
 
-								<div class="col-md-3 cnt_itms">
+								<div class="col-6 col-sm-4 col-lg-3 cnt_itms">
 									<div class="for_flat_cng">
 										<span class="button flat_chng">Хіт продажів</span>
 									</div>
 								</div>
 
-								<div class="col-md-3 cnt_itms">
+								<div class="col-6 col-sm-4 col-lg-3 cnt_itms">
 									<div class="for_flat_cng">
 										<span class="button flat_chng">Всі планування</span>
 									</div>
 								</div>
 
-								<div class="col-md-3 cnt_itms">
+								<div class="col-6 col-4 col-lg-3 cnt_itms d-none d-sm-flex">
 									<div class="for_flat_cng">
 										<!-- <span class="button flat_chng"></span> -->
 										<p>Встигніть придбати! Квартири від 11400 гривень за м2</p>
 									</div>
 								</div>
 
-								<!-- <div class="col-md-3">
+								<div class="col-6 d-sm-none">
 									<div class="for_flat_cng">
-										<span class="button flat_chng">Хіт продажів</span>
+										<span class="button flat_chng">1-кімнатні</span>
 									</div>
 								</div>
 
-								<div class="col-md-3">
+								<div class="col-6 d-sm-none">
 									<div class="for_flat_cng">
-										<span class="button flat_chng">Всі планування</span>
+										<span class="button flat_chng">2-кімнатні</span>
 									</div>
-								</div> -->
+								</div>
+
+								<div class="col-6 d-sm-none">
+									<div class="for_flat_cng">
+										<span class="button flat_chng">3-кімнатні</span>
+									</div>
+								</div>
+
+								<div class="col-6 d-sm-none">
+									<div class="for_flat_cng">
+										<span class="button flat_chng">Smart</span>
+									</div>
+								</div>
 
 							</div>
 
@@ -436,7 +521,7 @@
 
 	</section>
 
-	<section class="blue s_pad s_inf">
+	<section class="blue s_pad s_inf order-3">
 		
 		<div class="response_cl">
 
@@ -450,14 +535,14 @@
 
 							<div class="row justify-content-between">
 
-								<div class="col-lg-6">
+								<div class="col-12 col-lg-6 order-1 order-lg-1">
 									<div class="info_half1">
 										 <img src="img/text-logo-wh.svg" alt="вернисаж">
 										 <h5>Щоб дізнатися більше про житловий комплекс, ви можете:</h5>  
 									</div>
 								</div>
 
-								<div class="col-lg-5 half_end">
+								<div class="col-12 col-lg-6 col-xl-5 half_end order-3 order-lg-2">
 									<div class="info_half2">
 										<a href="tel:380979040701">+380 97 904 07 01</a>
 										<a href="mailto:info@vernisazh.com.ua">info@vernisazh.com.ua</a>
@@ -465,7 +550,7 @@
 									</div>
 								</div>
 
-								<div class="col-lg-12">
+								<div class="col-12 col-lg-12 order-2 order-lg-3">
 									<div class="popups_but">
 										<div class="button-2">
 											<div class="eff-2"></div>
@@ -530,6 +615,47 @@
 
 	<section class="condition white s_pad">
 
+		<div class="container cont_mob">
+
+			<div class="row">
+
+				<div class="col-12 d-block d-sm-none mob_h">
+
+					<h4>Розстрочка</h4>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="mob_sect d-sm-none">
+
+			<div class="number_top">
+
+				<div class="itm_bot">
+					<h4>36</h4>
+					<p>місяців розстрочка</p>
+				</div>
+
+				<div class="itm_bot">
+					<h4>20</h4>
+					<p>% перший внесок</p>
+				</div>
+
+				<div class="itm_bot">
+					<h4>1200</h4>
+					<p>грн за м<sup>2</sup></p>
+				</div>
+
+			</div>
+
+			<div class="bg_cm">
+				
+			</div>
+
+		</div>
+
 		<div class="response_cl">
 
 			<div class="cond_wr container">
@@ -542,10 +668,11 @@
 
 						<div class="row">
 
-							<div class="col-lg-7">
+							<div class="col-lg-7 col-12 order-2 order-lg-1">
 
 								<div class="cond_l">
-									<div class="top_numb">
+
+									<div class="top_numb d-none d-lg-flex">
 										<div class="itm_1">
 											<h4>36</h4>
 											<p>місяців розстрочка</p>
@@ -554,6 +681,25 @@
 											<h4>20</h4>
 											<p>% перший внесок</p>
 										</div>
+									</div>
+
+									<div class="number_bot d-none d-sm-block d-md-none">
+
+										<div class="itm_bot">
+											<h4>36</h4>
+											<p>місяців розстрочка</p>
+										</div>
+
+										<div class="itm_bot">
+											<h4>20</h4>
+											<p>% перший внесок</p>
+										</div>
+
+										<div class="itm_bot">
+											<h4>1200</h4>
+											<p>грн за м<sup>2</sup></p>
+										</div>
+
 									</div>
 									
 									<div class="cond_txt">
@@ -569,13 +715,16 @@
 
 							</div>
 
-							<div class="col-lg-5">
+							<div class="col-lg-5 col-12 order-1 order-lg-2">
 								<div class="cont_r">
-									<div class="top_numb2">
+									<div class="top_numb2 d-none d-lg-flex">
 										<div class="itm_2">
 											<h4>1200</h4>
 											<p>грн за м<sup>2</sup></p>
 										</div>
+									</div>
+									<div class="img_vis_rozst d-none d-sm-block d-md-none">
+										<img src="img/main/img-rozstr1.jpg" alt="">
 									</div>
 								</div>
 							</div>
@@ -598,7 +747,34 @@
 
 			<div class="container">
 
-					<div class="quest_wr">
+					<div class="consult_mob">
+
+						<a href="#" class="button butt_bl">Отримати консультацію
+							<span>
+								<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M10.7535 4.31736C13.3954 4.4051 15.7728 6.84058 15.7406 9.42767C15.736 9.78445 16.0218 10.0767 16.378 10.0812C16.3806 10.0812 16.3838 10.0812 16.3864 10.0812C16.7386 10.0812 17.027 9.798 17.0315 9.4438C17.0728 6.13671 14.1593 3.1393 10.7967 3.02833C10.4444 2.9993 10.1425 3.29607 10.1302 3.65156C10.1186 4.00768 10.3973 4.30575 10.7535 4.31736Z" fill="white"/>
+									<path d="M10.602 6.46382C12.2453 6.65801 13.5717 8.03221 13.5588 9.52769C13.5556 9.88446 13.8421 10.1754 14.1982 10.1787C14.2001 10.1787 14.2021 10.1787 14.204 10.1787C14.5575 10.1787 14.8459 9.8935 14.8492 9.5393C14.8672 7.40511 13.0298 5.45092 10.753 5.18253C10.4014 5.13801 10.0788 5.3935 10.0369 5.74769C9.9956 6.10124 10.2485 6.42253 10.602 6.46382Z" fill="white"/>
+									<path d="M16.1142 12.4761L15.9284 12.3342C15.5897 12.0671 15.2355 11.8245 14.893 11.5903L14.6646 11.4336C14.0362 11.0013 13.4381 10.8348 12.8897 10.9394C12.3742 11.0374 11.9271 11.3632 11.5613 11.9065C11.4749 12.0336 11.393 12.1555 11.0188 11.989C10.3633 11.6981 9.79747 11.3297 9.33682 10.8942L8.20844 9.28646C8.01811 8.8413 8.12198 8.70775 8.38069 8.53549C8.70715 8.31742 9.38586 7.86388 9.33553 6.9542C9.28457 6.03613 7.47037 3.60968 6.60327 3.29807C6.20844 3.15549 5.79682 3.15226 5.3794 3.29162C4.43618 3.60323 3.75618 4.16259 3.41424 4.90968C3.0865 5.62581 3.10005 6.4542 3.45295 7.30323C5.25876 11.6529 8.48521 14.8336 13.0426 16.7574C13.2775 16.8568 13.5181 16.909 13.6775 16.9445L13.7865 16.969C13.8459 16.9852 13.9078 16.991 13.9691 16.991C15.2923 16.991 16.6407 15.8 17.0284 14.7219C17.4723 13.4923 16.622 12.8561 16.1142 12.4761ZM15.8136 14.2845C15.5671 14.9703 14.6813 15.6613 14.0226 15.6987C14.0007 15.6942 13.9775 15.689 13.9523 15.6832C13.8265 15.6555 13.6697 15.6213 13.5446 15.5684C9.30973 13.7807 6.31553 10.8329 4.64392 6.80775C4.43295 6.29871 4.41295 5.82839 4.58779 5.4471C4.77682 5.03484 5.19037 4.71291 5.78521 4.51678C5.86005 4.49226 5.92779 4.47936 5.99166 4.47936C6.04908 4.47936 6.10327 4.48968 6.15682 4.50968C6.60844 4.71742 7.96908 6.53742 8.04715 7.02646C8.0536 7.13162 8.02973 7.21871 7.66521 7.46194C7.17747 7.7871 6.44973 8.53162 7.05682 9.87226C7.07295 9.90904 7.09295 9.94323 7.11618 9.97613L8.31682 11.6871C8.34069 11.7206 8.36715 11.7523 8.39618 11.7807C8.9736 12.34 9.68005 12.8065 10.4942 13.1684C11.3594 13.5555 12.1388 13.3587 12.631 12.6284C12.7975 12.3806 12.9652 12.2394 13.1297 12.2077C13.3794 12.1607 13.7033 12.3394 13.9317 12.4968L14.1633 12.6555C14.4904 12.8787 14.8181 13.1026 15.1284 13.3477C15.1975 13.4026 15.2691 13.4555 15.34 13.509C15.8897 13.9206 15.9155 14.0026 15.8136 14.2845Z" fill="white"/>
+									<path d="M14.6348 0H5.36516C2.45677 0 0 2.45742 0 5.36516V14.6342C0 17.5426 2.45677 20 5.36516 20H14.6348C17.5426 20 20 17.5426 20 14.6335V5.36516C20 2.45742 17.5432 0 14.6348 0ZM18.7097 14.6335C18.7097 16.8426 16.8439 18.709 14.6348 18.709H5.36516C3.15677 18.709 1.29032 16.8432 1.29032 14.6335V5.36516C1.29032 3.15677 3.15677 1.29032 5.36516 1.29032H14.6348C16.8432 1.29032 18.7097 3.15613 18.7097 5.36516V14.6335Z" fill="white"/>
+								</svg>											
+							</span>
+							<span>
+								<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g clip-path="url(#clip0)">
+									<path d="M20.8345 2.63378C20.6381 2.39467 20.3127 2.30599 20.0232 2.4124L1.64139 9.05517C1.27415 9.18864 1.01639 9.5123 0.968534 9.89986C0.921139 10.2856 1.09115 10.6599 1.41007 10.8753L4.03758 12.6689C4.29213 12.8428 4.61946 12.8614 4.89206 12.7176L10.5917 9.71197L6.14955 13.0288C5.94101 13.1846 5.81641 13.4331 5.81641 13.6933V16.7657C5.81641 17.0826 5.99024 17.373 6.27003 17.5237C6.55027 17.6744 6.88876 17.6595 7.15493 17.484L9.15117 16.1598L11.1142 17.4983C11.2862 17.6162 11.4911 17.6783 11.6978 17.6783C11.7677 17.6783 11.8378 17.6711 11.907 17.6567C12.1826 17.5992 12.4265 17.4289 12.5761 17.1895L20.8927 3.47588C21.0546 3.21185 21.0314 2.87397 20.8345 2.63378ZM11.6539 16.4445L9.62099 15.0583C9.47957 14.9616 9.3166 14.9133 9.15377 14.9133C8.99446 14.9133 8.835 14.9596 8.69542 15.0523L6.99119 16.1827V13.8667L14.835 8.00973C15.1853 7.74814 15.2735 7.27205 15.0401 6.90237C14.8064 6.53269 14.3388 6.40778 13.9521 6.61174L4.52819 11.5813L2.30583 10.0642L19.233 3.94723L11.6539 16.4445Z" fill="white"/>
+									</g>
+									<defs>
+									<clipPath id="clip0">
+									<rect width="20.0391" height="20" fill="white" transform="translate(0.960938)"/>
+									</clipPath>
+									</defs>
+								</svg>											
+							</span>
+						</a>
+
+					</div>
+
+					<div class="quest_wr d-none d-sm-flex">
 
 						<div class="quest_txt">
 							<h4>Залишились питання?</h4>
@@ -663,11 +839,11 @@
 
 				<div class="row">
 
-					<div class="col-lg-2 cnt_itm">
+					<div class="col-12 col-lg-2 cnt_itm">
 							<a href="#" class="logo"><img src="img/vernisazh-logo-wh.svg" alt=""></a>
 						</div>
 			
-						<div class="col-lg-5 cnt_itm">
+						<div class="d-none d-sm-flex col-12 col-lg-4 col-xl-5 cnt_itm">
 							<div class="soc">
 								<div class="icon"><a href="#"><img src="img/instagram.svg" alt=""><span>instagram</span></a></div>
 								<div class="icon"><a href="#"><img src="img/facebook.svg" alt=""><span>facebook</span></a></div>  
@@ -675,13 +851,13 @@
 							</div>
 						</div>
 			
-						<div class="col-lg-4 cnt_itm">
+						<div class="col-12 col-lg-5 col-xl-4 cnt_itm">
 							<div class="present_down">
 								<a href="#"><span>Завантажити презентацію житлового комплексу</span><img src="img/download2.svg" alt=""></a>
 							</div>
 						</div>
 			
-						<div class="col-lg-1 cnt_itm">
+						<div class="col-12 col-lg-1 cnt_itm">
 							<a class="wsf" href="https://wsf.com.ua">
 								<img src="img/wsf.svg" alt="">
 							</a>

@@ -193,6 +193,97 @@ body
 
 
 
+// MOB MENU
+
+.mob_mnu
+	right: -1000px
+	opacity: 0
+	transition: all .5s ease
+	background-color: $blue
+	color: #fff
+	position: fixed
+	width: 100%
+	z-index: 20
+	top: 77px
+	height: calc(100vh - 77px)
+	display: flex
+	align-items: center
+	justify-content: center
+
+	&.mob_visible
+		right: 0
+		opacity: 1
+
+
+	.mob_wr
+		display: flex
+		flex-direction: column
+		align-items: center
+		box-sizing: border-box
+		padding: 30px 0
+
+	.mob_nav
+		display: flex
+		justify-content: center
+
+		li
+			text-align: center
+			padding: 0 0 10px 0
+
+			a
+				font-size: 18px
+				color: #fff
+
+	.tel_bl
+		padding: 20px 0
+		
+		a
+			padding: 0 0 10px 0
+			color: #fff
+			font-size: 18px
+
+	.mob_addr
+		font-size: 18px
+
+	.mob_lang
+		max-width: 70px
+		width: 100%
+
+		.lang_slide
+			display: flex
+			justify-content: space-between
+		
+		a
+			color: #fff
+			font-size: 16px
+
+		li
+			position: relative
+			line-height: 1.4
+
+			&.active
+
+				&::after
+					position: absolute
+					content: ''
+					width: 100%
+					height: 1px
+					background-color: #fff
+					left: 0
+					bottom: 0
+
+	.mob_soc
+		padding-top: 40px
+		max-width: 150px
+		width: 100%
+		display: flex
+		justify-content: space-between
+
+		img
+			width: 30px
+			height: auto
+
+
 
 
 
@@ -203,23 +294,40 @@ body
 	line-height: 1
 
 .hamburger-box
-	width: 30px
+	width: 45px
+	height: 30px
 
 .hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
-	height: 2px
+	height: 3px
 	background-color: $blue
-	width: 30px
+	width: 45px
 
-// .hamburger-inner:after
-// 	bottom: -7px
+.hamburger-inner:after
+	top: 11px
 
-// .hamburger-inner:before
-// 	top: -7px
+.hamburger-inner:before
+	top: -11px
 
+.hamburger--emphatic .hamburger-inner:after
+	top: 11px
+
+.hamburger--emphatic.is-active .hamburger-inner:before
+	top: -78px
+	left: -80px
+
+.hamburger--emphatic.is-active .hamburger-inner:after
+	top: -78px
+	right: -80px
+
+.show_title
+	display: flex!important
 
 
 // HEADER
 
+
+.top_head_cnt
+	z-index: 7!important
 
 .top_head
 	background-color: $blue
@@ -256,6 +364,7 @@ body
 
 .head_addr
 	font-size: 14px
+	padding-left: 10%
 
 	p
 		margin: 0
@@ -317,13 +426,34 @@ body
 		z-index: 5
 
 
+.img_sub_bl
+	position: absolute
+	top: 50%
+	transform: translateY(-50%)
+	right: -120px
+
+	img
+		width: 270px
+		border: 10px solid #fff
+		box-shadow: 0 0 10px rgba($blue, .3)
+
+
+
 .menu_itms
 	background-color: #fff
-	padding: 20px 0
+	padding: 20px 0!important
+	transition: all .3s ease
+
+	&.head_scroll
+		box-shadow: 0 10px 10px rgba($blue, .4)
+		padding: 15px 0
+
 
 	.logo
-		width: 150px
-		height: auto
+
+		img
+			width: 150px
+			height: auto
 
 	.button
 		font-size: 14px
@@ -475,6 +605,7 @@ body
 	padding: 100px 0
 
 	.img_bl
+		position: relative
 
 		img
 			max-width: 100%
@@ -484,27 +615,28 @@ body
 
 
 .line_title
-		position: absolute
-		left: -88px
-		transform: rotate(-90deg)
-		top: 80px
-		@include MontBold()
-		font-size: 18px
-		text-transform: uppercase
-		color: $blue
+	white-space: nowrap
+	position: absolute
+	left: -88px
+	transform: rotate(-90deg)
+	top: 80px
+	@include MontBold()
+	font-size: 18px
+	text-transform: uppercase
+	color: $blue
 
-		span
-			position: relative
+	span
+		position: relative
 
-			&::after
-				position: absolute
-				width: 35px
-				height: 2px
-				background-color: $blue
-				content: ''
-				left: -220px
-				top: 50%
-				transform: translateY(-50%)
+		&::after
+			position: absolute
+			width: 35px
+			height: 2px
+			background-color: $blue
+			content: ''
+			left: -220px
+			top: 50%
+			transform: translateY(-50%)
 
 .first_title
 	position: relative
@@ -613,6 +745,30 @@ body
 	p
 		font-size: 24px
 
+.hide_num
+	display: none
+
+
+.slick-dots
+	bottom: 20px
+
+	li 
+		
+		button
+			border: 1px solid #fff
+			border-radius: 50%
+			width: 10px
+			height: 10px
+			transition: all .3s ease
+
+			&::before
+				display: none
+
+	.slick-active
+
+		button
+			background-color: #fff
+
 .main_flat_wr
 	width: 100%
 	display: flex
@@ -630,6 +786,46 @@ body
 	position: relative
 	width: 10% 
 
+.mob_sect
+	display: flex
+
+	.number_top
+		width: 50%
+		padding: 30px 20px
+		display: flex
+		flex-direction: column
+		align-items: center
+
+		.itm_bot
+
+			h4
+				font-size: 30px
+
+			p
+				font-size: 14px
+				padding-left: 10px
+
+	.bg_cm
+		width: 50%
+		background-image: url('../img/main/cond-mob.jpg')
+		background-size: cover
+		background-position: center
+
+.consult_mob
+
+	.button
+		max-width: 90%
+		font-size: 14px
+		display: flex
+		align-items: center
+		justify-content: center
+		margin: auto
+
+	span
+		padding: 0 5px
+
+	svg
+		width: 20px
 
 .main_flat_nav
 	position: relative
@@ -753,9 +949,36 @@ body
 		color: #fff
 		@include MontBold()
 
+
+.cont_mob
+	padding: 0
+
+.mob_h
+	@include MontBold()
+	font-size: 14px
+	text-transform: uppercase
+	padding-bottom: 20px
+	
+	h4
+		position: relative
+		padding-left: 40px
+
+		&::after
+			content: ''
+			width: 25px
+			height: 2px
+			position: absolute
+			left: 0
+			background-color: $blue
+			top: 50%
+			transform: translateY(-50%)
+
 .half_end
 	display: flex
 	align-items: flex-end		
+
+.s_quest
+	padding: 0 0 100px 
 
 .info_half2
 	text-align: right
@@ -1079,5 +1302,7 @@ body
 		border-bottom: 1px solid #f00
 	100% 
 		border-bottom: 1px solid #FFF
+
+
 
 @import "media" // Always at the end

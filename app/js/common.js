@@ -25,7 +25,16 @@ $(function() {
     fade: true,
     cssEase: 'linear', 
     speed: 500,
-    autoplaySpeed: 5000
+    autoplaySpeed: 5000,
+    responsive: [{
+
+      breakpoint: 768,
+      settings: {
+        dots: true,
+      }
+
+    }
+]
   });
 
 
@@ -38,6 +47,23 @@ $(function() {
     prevArrow: '.flat_sort .l_arr',
     nextArrow: '.flat_sort .r_arr',
     speed: 500,
+    responsive: [{
+
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+          }
+    
+        },
+        {
+
+          breakpoint: 570,
+          settings: {
+            slidesToShow: 1,
+          }
+    
+        }
+    ]
   });
 
   $('.input-container input').blur(function(event) {
@@ -49,6 +75,33 @@ $(function() {
       this.classList.remove('value-exists');
     }
   });
+
+
+  if ($(window).width() < 1024) {
+
+    $('.title_wr').clone().appendTo('.bg_bl');
+
+    $('.bg_bl').find('.title_wr').addClass('show_title');
+
+    $(window).scroll(function() {
+
+      if ($(this).scrollTop() > $(this).height()) {
+        $('.menu_itms').addClass('head_scroll');
+      } else {
+        $('.menu_itms').removeClass('head_scroll');
+      }
+
+    });
+
+  }
+
+  if ($(window).width() < 570) {
+    $('.about_numb').addClass('hide_num').clone().prependTo('.numb_sm');
+    $('.numb_sm').find('.about_numb').removeClass('hide_num');
+  }
+
+
+
 
  
   // // AOS animation 
@@ -246,6 +299,10 @@ $(function() {
 
 
 
+  $('#my-menu').click(function() {
+    $('.mob_mnu').toggleClass('mob_visible');
+    $('.hamburger').toggleClass('is-active');
+  })
 
 
 
