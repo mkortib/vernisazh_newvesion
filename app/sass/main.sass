@@ -1474,7 +1474,356 @@ body
 	.label
 		display: flex
 
+
+// ABOUT PAGE
+
+
+.main_about_wr
+	width: 100%
+	display: flex
+	position: relative
+
+.s_under_header
+	display: flex
+	justify-content: center
+	font-size: 36px
+	@include MontBold()
+	position: relative
+	padding: 115px 0
+	
+	h2
+		color: #fff
+		font-size: 36px
+		position: relative
+		z-index: 8
+
+	&::after
+		content: ''
+		width: 100%
+		height: 100%
+		position: absolute
+		left: 0
+		top: 0
+		bottom: 0
+		right: 0
+		background-image: url('../img/main/bg-1920.jpg')
+		background-position: center center
+		background-size: cover
+		z-index: 3
+
+	&::before
+		content: ''
+		width: 100%
+		height: 100%
+		position: absolute
+		left: 0
+		top: 0
+		bottom: 0
+		z-index: 4
+		right: 0
+		background-color: rgba($blue, .8)
+
 		
+// breadcrumbs
+
+.s_bread
+	padding-top: 30px
+
+.breadcrumbs
+	max-width: 1440px
+	width: 100%
+	position: relative
+	left: 50%
+	transform: translateX(-50%)
+	display: flex
+	align-items: center
+	@include MontBold()
+
+	img
+		// display: block
+		position: relative
+		width: 10px
+		transform: rotate(180deg)
+		height: auto
+		left: 10px
+	
+	li, a
+		font-size: 14px
+		color: $text
+		@include MontReg()
+
+	li
+		padding: 0 20px 0 0
+
+
+.s_padding
+	padding-top: 100px
+
+
+.slider_about
+
+	.slide
+		height: 642px
+		position: relative
+
+	.img_bl
+		height: 100%
+		background-size: cover
+		background-position: center
+		position: relative
+
+		&::after
+			z-index: 1
+			content: ''
+			width: 100%
+			height: 100%
+			position: absolute
+			left: 0
+			top: 0
+			bottom: 0
+			right: 0
+			background-color: rgba(#000, .25)
+
+.slider_about
+	width: 90%
+	// margin: auto 
+
+
+.slider_about_wr
+	position: relative
+
+	.text_bl
+		bottom: -50px
+		right: 0
+		position: absolute
+		max-width: 570px
+		width: 100%
+		background-color: #fafafa
+		color: $text
+		padding: 30px 40px 80px 40px
+		box-sizing: border-box
+
+		img
+			max-width: 400px
+			width: 100%
+			display: block
+			padding-bottom: 40px
+
+		h5	
+			font-size: 16px
+			@include MontBold()
+			margin-bottom: 20px
+
+		p
+			font-size: 16px
+
+	.about_nav
+		display: flex
+		z-index: 2
+		position: absolute
+		bottom: 10px
+		left: 100px
+		max-width: 400px
+		width: 100%
+		justify-content: space-between
+
+	.slide_counter
+		display: flex
+		width: 100%
+		align-items: center
+
+		p
+			margin: 0
+			line-height: 1
+
+		.curr_slide
+			color: $blue
+			@include MontBold()
+			font-size: 36px
+
+		.all_slides
+			top: -10px
+			margin-left: 20px
+			color: #fff
+			@include MontBold()
+			font-size: 18px
+			max-width: 90px
+			width: 100%
+			position: relative
+			line-height: 1
+
+			&::after
+				content: ''
+				width: 100%
+				height: 2px
+				background-color: #fff
+				position: absolute
+				left: 0
+				bottom: -5px
+
+	.slide_arrows
+		width: 100%
+		display: flex
+		justify-content: space-between
+
+		div
+			cursor: pointer
+			max-width: 90px
+			width: 100%
+			background-color: $blue
+			display: flex
+			align-items: center
+			justify-content: center
+			padding: 15px 0
+
+		img
+			display: block
+			position: relative
+
+
+.characteristics
+	padding-top: 60px
+
+.char_itm
+	display: flex
+	align-items: center
+	justify-content: center
+	padding: 45px 30px
+	flex-direction: column
+	text-align: center
+	margin-bottom: 50px
+
+	&.blue_itm
+		background-color: $blue
+		color: #fff
+
+		h5
+			font-size: 16px
+			@include MontBold()
+			margin: 30px 0 20px
+
+		p
+			font-size: 16px
+
+	&.white_itm
+		background-color: #fff
+		color: $text
+		box-shadow: 0px 0px 45px rgba(0, 0, 0, 0.25)
+
+		h3
+			font-size: 64px
+			@include MontBold()
+			margin-bottom: 30px
+
+		h4
+			font-size: 24px
+			@include MontBold()
+
+	img
+		display: block
+		width: 100px
+		height: auto
+		
+
+.title_type2
+	font-size: 24px
+	@include MontBold()
+	text-transform: uppercase
+
+.about_map
+	padding-top: 60px
+	
+	img
+		display: block
+		height: auto
+		width: 100%
+
+.map_icons
+	padding-top: 60px
+
+	.map_icon
+		display: flex
+		align-items: center
+		margin-bottom: 60px
+
+	p
+		margin: 0
+		padding-left: 30px
+		font-size: 16px
+
+.invest
+	display: flex
+	justify-content: space-between
+	width: 100%
+	margin-top: 60px
+
+	.img_itm
+
+		img
+			width: 70px
+			height: auto
+
+	.invest_txt
+		max-width: 90%
+		font-size: 18px
+		margin-left: 20px
+
+		h5
+			@include MontBold()
+			max-width: 300px
+		
+		p
+			margin-top: 20px
+			line-height: 1.4
+
+// Contact Page
+
+.open_map
+	display: flex
+	align-items: center
+
+	img
+		width: 54px
+		height: auto
+
+	a
+		cursor: pointer
+		font-size: 14px
+		text-transform: uppercase
+		position: relative
+		margin: 0
+		line-height: 1
+		margin-left: 20px
+		text-decoration: none
+
+		&::after
+			width: 100%
+			height: 1px
+			background-color: $text
+			bottom: -5px
+			position: absolute
+			content: ''
+			left: 0
+			transition: all .3s ease
+
+		&:hover
+
+			&::after
+				bottom: -2px
+
+
+.main_contact_wr
+	width: 100%
+	display: flex
+	position: relative
+
+	.line_wr 
+		
+		.line_title 
+			
+			span
+				left: 50px
+
 
 
 
