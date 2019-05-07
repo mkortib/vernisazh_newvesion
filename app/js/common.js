@@ -171,6 +171,14 @@ $(function() {
   }
 
 
+  if ($(window).width() < 1440) {
+    $('.bootstr_chng').removeClass('col-xl-6').addClass('col-xl-7');
+  }
+
+  if ($(window).width() < 1280) {
+    $('.hit_flats .slide_flat .top_txt span').prepend('<br/>');
+  }
+
 
   //
   
@@ -180,6 +188,86 @@ $(function() {
     $('#small-dialog2').find('input[name=name]').val(name);
     $('#small-dialog2').find('input[name=phone]').val(phone);
   })
+
+  // CALCULATE
+
+  var minVal,
+      maxVal,
+      room,
+      roomNum,
+      section,
+      month3per,
+      month5per,
+      curmonth,
+      section,
+      squareVal,
+      sectNum,
+      instRange,
+      rassroch,
+      month;
+
+
+  $(".room-amount input").click(function (){
+      roomNum = $(this).data("room");
+      room = $(this).val();
+  });
+
+  $(".section-amount input").click(function (){
+    section = $(this).val();
+    sectNum = $(this).data("sect");
+  });
+
+  $(".credit-amount input").click(function (){
+    curmonth = $(this).val();
+  });
+
+
+  // Range UI
+
+  $('#range-2').range({
+    min: 22,
+    max: 114,
+    start: 22,
+    // input: '#squareVal',
+    onChange: function(numb) {
+      squareVal = numb;
+      minVal = (squareVal * section * 30) / 100;
+      maxVal = (squareVal * section * 95) / 100; 
+      $('#squareVal').val(numb + ' м²');
+      $("#minval").text(minVal.toFixed(0) + ' грн');
+      $("#maxval").text(maxVal.toFixed(0) + ' грн');
+    }
+  });
+
+  $('#range-3').range({
+    min: minVal,
+    max: maxVal,
+    // start: (minVal ? minVal : 23),
+    onChange: function(numb) {
+      // instRange = numb;
+      console.log(minVal);
+      console.log(maxVal);
+      $("#instVal").val(numb);
+      // var res = instRange / (squareVal * section) * 100;
+      // rassroch = (squareVal * section) - instRange;
+      // month = rassroch / curmonth;
+      // month3per = (rassroch - (rassroch * 3 / 100)) / curmonth;
+      // month5per = (rassroch - (rassroch * 5 / 100)) / curmonth;
+      // $("#pers").val(res.toFixed(2));
+      // if(meta.triggeredByUser) {
+      //   'set value', 17
+      // }
+    }
+  });
+
+  // Calculate functions
+
+  $('.throwdown').click(function() {
+    location.reload(true);
+  })
+
+
+
 
 
 

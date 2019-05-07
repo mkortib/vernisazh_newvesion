@@ -52,6 +52,7 @@ gulp.task('js', function() {
 		'app/libs/jQuery-Mask-Plugin-master/dist/jquery.mask.min.js',
 		'app/libs/aos/aos.js',
 		'app/libs/anime.js/anime.min.js',
+		'app/libs/semantic-ui-range/range.js',
 		'app/js/common.js', // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))
