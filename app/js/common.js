@@ -165,6 +165,67 @@ $(function() {
 
   }
 
+  if($(window).width() < 768) {
+    var radios = $('.room-amount .radio-wrap .radio');
+    var section = $('.section-amount .radio-wrap .radio');
+    var credit = $('.credit-amount .radio-wrap .radio');
+
+    var frstCol = [];
+    var secCol = [];
+    var frstCol2 = [];
+    var secCol2 = [];
+    var frstCol3 = [];
+    var secCol3 = [];
+
+
+
+    for (var i = 0; i < radios.length; i++) {
+      if (i < 2) {
+        frstCol.push(radios[i]);
+        frstCol2.push(section[i]);
+        frstCol3.push(credit[i]);
+      } else {
+        secCol.push(radios[i])
+        secCol2.push(section[i])
+        secCol3.push(credit[i])
+      }
+    }
+
+    $('.room-amount .radio-wrap')
+      .text('')
+        .append('<div class="frts_col">')
+          .find('.frts_col')
+            .append(frstCol)
+        .parent()
+        .append('<div class="scnd_col">')
+          .find('.scnd_col')
+            .append(secCol)
+
+    $('.section-amount .radio-wrap')
+    .text('')
+      .append('<div class="frts_col">')
+        .find('.frts_col')
+          .append(frstCol2)
+      .parent()
+      .append('<div class="scnd_col">')
+        .find('.scnd_col')
+          .append(secCol2)
+
+    $('.credit-amount .radio-wrap')
+    .text('')
+      .append('<div class="frts_col">')
+        .find('.frts_col')
+          .append(frstCol3)
+      .parent()
+      .append('<div class="scnd_col">')
+        .find('.scnd_col')
+          .append(secCol3)
+
+              
+    
+
+  }
+
   if ($(window).width() < 570) {
     $('.about_numb').addClass('hide_num').clone().prependTo('.numb_sm');
     $('.numb_sm').find('.about_numb').removeClass('hide_num');
