@@ -2245,17 +2245,317 @@ input
 	background-color: $blue
 	padding: 40px 30px
 
+.comercial_link
+	display: flex
+	flex-direction: column
+
+	span
+		line-height: 1
+		font-size: 17px
+		padding: 0
+
+.flats_bl
+	margin: 60px 0 100px
+
+	.slide_flat
+		max-width: 330px
+		margin: 0 auto 60px
+
+.s_flats
+
+	.line_title
+		top: 280px
+
+.nav_paginate
+	display: flex
+	justify-content: center
+
+.wp-pagenavi
+	display: inline-block
+	display: flex
+
+	a, span
+		display: flex
+		justify-content: center
+		width: 30px
+		font-size: 14px
+		padding: 10px 0
+		border: 2px solid #858A91
+		@include MontBold()
+		color: #858A91
+		margin: 0 10px
+		line-height: 1
+		text-decoration: none
+		transition: all .3s ease
+		cursor: pointer
+
+		&:hover
+			color: $text
+			border-color: $text
+
+		img
+			display: block
+			width: 10px
+			height: auto
+
+	.current
+		border-color: $text
+		color: $text 
 
 
+// FLAT OPEN
+
+.flat_open
+	box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.25)
+	margin-bottom: 50px
+	padding: 30px 120px 60px
+
+.layouts_nav
+	display: flex
+	justify-content: space-between
+	padding-bottom: 60px
+
+	img
+		margin: 0 15px
+		width: 15px
+		height: 15px
+		transition: all .5s ease
+	a
+		font-size: 14px
+		color: $text
+		text-decoration: none
+		display: flex
+		align-items: center
+
+		&:hover
+
+			img
+				margin: 0 10px
+
+.flat_img
+	height: 100%
+	display: flex
+	align-items: center
+
+	img
+		max-width: 100%
+		display: block
+		height: auto
+
+.flat_info_main
+	@include MontBold()
+	text-transform: uppercase
+
+	h4
+		font-size: 16px
+
+	h5
+		font-size: 36px
+		color: $blue
+		padding-left: 20px
+
+.all_flat_info
+	padding: 60px 0
+
+	h5
+		font-size: 16px
+		@include MontReg()
+		text-transform: uppercase
+
+.inf_fl
+
+	li
+		display: flex
+		justify-content: space-between
+		padding: 5px 0
+		font-size: 16px
+
+.on_floor_wrap
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: center
+
+	img
+		max-width: 100%
+		display: block
+		height: auto
+		margin: auto
+
+.flat_buttns
+	display: flex
+	justify-content: space-between
 	
-	 
+	a
+		max-width: 320px
 
+.s_other_flats
+	padding-bottom: 60px
 
-
-
-
-
+	.slide_flat 
 	
+		.top_txt
+			display: flex
+			align-items: center
+
+			h4
+				margin: 0
+
+	h2
+		text-align: center
+		@include MontReg()
+		font-size: 24px
+
+// NEWS PAGE
+
+.s_news
+
+	.line_title
+		top: 163px
+		left: -27px
+
+		span
+			left: 63px
+
+.news_nav
+	margin-bottom: 60px
+	border: 2px solid transparent
+	max-width: 210px
+	width: 100%
+	text-transform: uppercase
+	transition: all .3s ease
+	text-decoration: none
+	display: block
+	padding: 15px 0
+	line-height: 1
+	text-align: center
+
+	&:hover, &.active
+		border: 2px solid $blue
+		text-decoration: none
+		transform: scale(1.01)
+		font-weight: bold
+
+
+.main_new
+	box-shadow: 0px 0px 45px rgba(0, 0, 0, 0.25)
+	padding: 60px 30px
+
+.img_main_new
+	width: 100%
+	height: 190px
+	background-position: center
+	background-size: cover
+
+.main_new_desc
+
+	h3
+		@include MontBold()
+		font-size: 36px
+		margin-bottom: 15px
+
+	> div *
+		font-size: 16px
+		line-height: 1
+
+	a
+		max-width: 330px
+		margin-top: 20px
+
+.news_bl
+	padding-bottom: 100px
+
+	.nav_paginate
+		margin-top: 40px
+
+
+.new
+	margin-bottom: 60px
+
+	.img_new
+		width: 100%
+		height: 190px
+		background-size: cover
+		background-position: center
+		position: relative
+		cursor: pointer
+		
+		a
+			position: absolute
+			display: block
+			left: 0
+			bottom: 0
+			right: 0
+			top: 0
+
+	h4
+		font-size: 16px
+		@include MontBold()
+		margin-top: 30px
+
+	> div
+
+		*
+			font-size: 16px
+
+		margin-top: 30px
+
+	.bott_link
+		margin-top: 30px
+		display: flex
+		font-size: 18px
+		justify-content: space-between
+		width: 100%
+
+		a
+			color: $text
+			text-decoration: none
+			text-transform: uppercase
+
+
+// .img_new::before 
+// 	position: absolute
+// 	top: 0
+// 	left: -75%
+// 	z-index: 2
+// 	display: block
+// 	content: ''
+// 	width: 50%
+// 	height: 100%
+// 	background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%)
+// 	background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%)
+// 	-webkit-transform: skewX(-25deg)
+// 	transform: skewX(-25deg)
+
+// .img_new
+	
+// 	&:hover
+		
+// 		&::before 
+// 			-webkit-animation: shine .75s
+// 			animation: shine .75s
+	
+// 		&::after
+// 			opacity: 1
+
+// @-webkit-keyframes shine 
+// 	100% 
+// 		left: 125%
+	
+
+// @keyframes shine 
+// 	100% 
+// 		left: 125%
+
+
+
+
+
+
+		
+			
+
+
 
 // range custom style
 
